@@ -1,0 +1,16 @@
+
+<% if user_signed_in? %>
+  <h1><%= "こんにちは, #{current_user.email}"%></h1>
+<% else %>
+  <h1>Page#index</h1>
+<% end %>
+
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<% if user_signed_in? %>
+  <%= button_to "ログアウト", destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to "ログイン", new_user_session_path %>
+  <br>
+  <%= link_to "新規登録", new_user_registration_path %>
+<% end %>
