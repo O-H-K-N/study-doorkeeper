@@ -60,6 +60,10 @@ gem 'font-awesome-sass'
 # devise
 gem 'devise'
 
+# doorkeeper
+gem "doorkeeper", "~> 5.6"
+gem 'doorkeeper-i18n'
+
 group :development, :test do
   #Debugger
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
